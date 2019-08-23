@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- link stylesheet -->
+    <link rel = "stylesheet" href = "taskManagerLists.css">
+
+    <!-- link javascript -->
+    <script src = "taskManagerLists.js" type = "text/javascript"></script>
+
+  </head>
+
+  <body>
+    <h1 id = "heading"><center>Lists</center></h1>
+
+    <p>
+      <div class="tab">
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManager.html';">Home Page</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerSchedule.html';" >Schedule</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerCalendar.html';">Calendar</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerReminders.html';">Reminders</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerLists.html';">Lists</button>
+      </div>
+    </p>
+    <div id="myDIV" class="header">
+      <h2>My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Item...">
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL">
+    </ul>
+
+  </body>
+</html>

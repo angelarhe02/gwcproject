@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- link stylesheet -->
+    <link rel = "stylesheet" href = "taskManagerSchedule.css">
+
+    <!-- link javascript -->
+    <!-- <script src = "myScript.js"></script> -->
+
+    <!-- link javascript -->
+    <script src = "taskManagerSchedule.js" type = "text/javascript"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        form{
+            margin: 20px 0;
+            font-family:impact;
+        }
+        form input, button{
+            padding: 10px;
+            font-family:impact;
+        }
+        table{
+            width: 80%;
+            margin-bottom: 40px;
+            font-family:impact;
+        border-collapse: collapse;
+        }
+        table, th, td{
+            border: 1px solid white;
+            margin-left: 200px;
+            font-family:impact;
+        }
+        table th, table td{
+            padding: 10px;
+            position: relative;
+            text-align: left;
+            font-family:impact;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".add-row").click(function(){
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+                $("table tbody").append(markup);
+            });
+
+            // Find and remove selected table rows
+            $(".delete-row").click(function(){
+                $("table tbody").find('input[name="record"]').each(function(){
+                  if($(this).is(":checked")){
+                        $(this).parents("tr").remove();
+                    }
+                });
+            });
+        });
+    </script>
+  </head>
+
+  <body>
+    <h1 id = "heading"><center>Schedule</center></h1>
+
+
+    <p>
+  <!-- <button onclick = "panHome()">Pan Home</button> -->
+      <div class="tab">
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManager.html';">Home Page</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerSchedule.html';" >Schedule</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerCalendar.html';">Calendar</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerReminders.html';">Reminders</button>
+        <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerLists.html';">Lists</button>
+      </div>
+    </p>
+    <form>
+        <input type="text" id="name" placeholder="Time">
+        <input type="text" id="email" placeholder="Event">
+      <input type="button" class="add-row" value="Add">
+        <button type="button" class="delete-row">Delete Row</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Time</th>
+                <th>Event</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+
+  </body>
+</html>

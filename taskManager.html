@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- link stylesheet -->
+    <link rel = "stylesheet" href = "taskManager.css">
+
+    <!-- link javascript -->
+    <script src = "taskManager.js" type = "text/javascript"></script>
+
+  </head>
+
+  <body>
+     <button type="button" onclick="PINKfunction()">Pink</button>
+
+       <script>
+       function PINKfunction() {document.body.style.backgroundColor = "pink"}
+       </script>
+
+     <button type="button" onclick="REDfunction()">Red</button>
+
+       <script>
+       function REDfunction() {document.body.style.backgroundColor = "tomato"}
+       </script>
+
+     <button type="button" onclick="ORANGEfunction()">Orange</button>
+
+       <script>
+       function ORANGEfunction() {document.body.style.backgroundColor = "orange";}
+       </script>
+
+     <button type="button" onclick="GREENfunction()">Green</button>
+
+       <script>
+       function GREENfunction() {document.body.style.backgroundColor = "lightgreen";}
+       </script>
+
+     <button type="button" onclick="BLUEfunction()">Baby Blue</button>
+
+       <script>
+       function BLUEfunction() {document.body.style.backgroundColor = "lightblue";}
+       </script>
+
+     <button type="button" onclick="PURPLEfunction()">Purple</button>
+
+       <script>
+       function PURPLEfunction() {document.body.style.backgroundColor = "violet";}
+       </script>
+
+     <button type="button" onclick="ORIGINALfunction()">Original</button>
+
+       <script>
+       function ORIGINALfunction() {document.body.style.backgroundColor = "lightsteelblue"}
+       </script>
+    <h1 id = "heading"><center>Task Manager</center></h1>
+
+
+    <div class = "heading4">
+      <h2>Overview Calendar</h2>
+    </div>
+
+    <div id = "calendar">
+      <iframe id = "embed" scrolling = "no" src="file:///C:/Users/GWC25/Desktop/taskManager/taskManagerCalendar.html" >
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManager.html';">Home Page</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerSchedule.html';">Schedule</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerCalendar.html';">Calendar</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerReminders.html';">Reminders</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerLists.html';">Lists</button>
+    </div>
+
+    <h3>Date: <span id="datetime"></span></h3>
+
+    <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+    </script>
+
+    <div id = "logo">
+      <img src= "logo.png" alt= " " width= "300" height = "200">
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- link stylesheet -->
+    <link rel = "stylesheet" href = "taskManagerReminders.css">
+
+    <!-- link javascript -->
+    <script src = "taskManagerReminders.js" type = "text/javascript"></script>
+
+    <!-- link Reminder stylesheet -->
+    <link rel = "stylesheet" href = "taskManagerReminders.css"
+
+  </head>
+
+  <body>
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManager.html';">Home Page</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerSchedule.html';">Schedule</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerCalendar.html';">Calendar</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerReminders.html';">Reminders</button>
+      <button class="tablinks" onclick="window.location.href = 'file:///C:/Users/GWC25/Desktop/taskManager/taskManagerLists.html';">Lists</button>
+    </div>
+
+    <!-- <div class = "reminder">
+      <button class="reminderlinks" onclick="window.location.href = 'file:///C:/Users/GWC13/Desktop/Website/taskManagerSchedule.html';" >Add New Reminder</button>
+    </div> -->
+
+    <div>
+      <h1 id = "heading"><center>Reminders</center></h1>
+    </div>
+
+    <div id="myDIV" class="header">
+      <h2>Today's Reminders</h2>
+      <input type="text" id="myInput" placeholder="Item...">
+      <span onclick="newElement()" class="addBtn">Add</span>
+      <ul id="myUL">
+      </ul>
+    </div>
+
+
+    <div id="myDIV2" class="header2">
+      <h2>Weekly Reminders</h2>
+      <input type="text" id="myInput2" placeholder="Item...">
+      <span onclick="newElement2()" class="addBtn2">Add</span>
+      <ul id="myUL2">
+      </ul>
+    </div>
+
+
+
+    <div id="myDIV3" class="header3">
+      <h2>Monthly Reminders</h2>
+      <input type="text" id="myInput3" placeholder="Item...">
+      <span onclick="newElement3()" class="addBtn3">Add</span>
+      <ul id="myUL3">
+      </ul>
+    </div>
+
+
+
+  </body>
+</html>
